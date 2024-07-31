@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Giftshop.sol": "Gi"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Giftshop.sol": {
+			"keccak256": "0x8911883059be1599c36bfa2e5771dac910240363dc5b1d79e3f7727ab2cc0894",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f0cfb8bae659a10a5be164bf708f332bd5ec3d907204d016e45a609c20859eb1",
+				"dweb:/ipfs/QmVoHwbvi9nZczsGJMGHmDWKkd5f5xYNhkr8jtHoR76W8a"
+			]
+		}
+	},
+	"version": 1
+}
