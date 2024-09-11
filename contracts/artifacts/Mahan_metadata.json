@@ -874,11 +874,11 @@
 			]
 		},
 		"contracts/NftMint.sol": {
-			"keccak256": "0x495b8c77a5f334939d1c6a492ae9940a3f5e222a687ae10445e3729869e9ea9b",
+			"keccak256": "0x323be3b6e5f1485b30f6d8f732120990668057134554bab35c8257e3ddce2876",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b76b9681718901ca013bba6f74b2f617990744dff9c9c3180c72c4343a8fe935",
-				"dweb:/ipfs/QmQrVcG5WthAyJF3zkaFo2AHDEer9Cq7dW1nufEPLHwD3T"
+				"bzz-raw://75213fc5b756739cf3fbe8683938c2607b7d0426d6b2d16bb4e6f2ee63a7280a",
+				"dweb:/ipfs/Qmb7ebcdUAQiafBcTuwowQWgKdXVbwCv3Mx6387vCvpnjc"
 			]
 		}
 	},
