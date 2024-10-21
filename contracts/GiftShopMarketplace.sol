@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Compatible with OpenZeppelin Contracts ^5.0.0
+
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -32,6 +32,7 @@ contract GiftShopMarketplace is Ownable {
         uint256 timestamp;
     }
 
+  
     
 
     
@@ -45,6 +46,8 @@ contract GiftShopMarketplace is Ownable {
 
     Product[] public products;
     TransactionStruct[] transactions;
+    mapping(address => TransactionStruct) private nftsOwned;
+
     
 
     event CreateProduct(string product_title, uint product_Id);
@@ -175,6 +178,20 @@ contract GiftShopMarketplace is Ownable {
                 products[_productId - 1].nftUrl,
                 block.timestamp
             ));
+        
+
+        nftsOwned[msg.sender] =
+            TransactionStruct({
+                id: totalTx,
+                owner: msg.sender,
+                salePrice: totalPrice,
+                title: products[_productId - 1].product_Title,
+                category: products[_productId-1].category,
+                description: products[_productId - 1].desc,
+                amount: productAmount,
+                nftUrl: products[_productId - 1].nftUrl,
+                timestamp: block.timestamp
+            });
 
         uint256 oldAmount = product.amount;
         product.amount = oldAmount - productAmount;
@@ -209,6 +226,11 @@ contract GiftShopMarketplace is Ownable {
     function getAllTransactions() public view returns (TransactionStruct[] memory){
         return transactions;
     }
+
+    function getNftOfUsers(address _user) public view returns (TransactionStruct memory){
+        return nftsOwned[_user];
+    }
+
 }
 
 

@@ -440,6 +440,72 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "getNftOfUsers",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "salePrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "title",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "category",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "nftUrl",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct GiftShopMarketplace.TransactionStruct",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "_productId",
 						"type": "uint256"
@@ -1037,19 +1103,19 @@
 			]
 		},
 		"contracts/FractionalToken.sol": {
-			"keccak256": "0x0120b96d979ce06bb4f13694fbc888bad1756f9140f3a57796da234f1a5ff746",
+			"keccak256": "0xaac6d1323c3de1a13c055984ab3d0b06331a20d5c44f7a6173d3a673cacef7c5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://083ca2bb0e6f407ce507ca70fdeca2f31d73d5bf51784487b31e149e200146c9",
-				"dweb:/ipfs/QmP8q5wD2rjDJhEBmh93ioVukxgR71Y8RWe9hKgTNwV6N3"
+				"bzz-raw://a72eda0e0e898c74dc4b4a8bd8b12b40bc579d2d4d9e73a1ee200fcacf7fbcf0",
+				"dweb:/ipfs/QmbVEXZYmW2VXgVsTESK8bitsLfTcAxSxaLssggRLSrZhW"
 			]
 		},
 		"contracts/GiftShopMarketplace.sol": {
-			"keccak256": "0x27a853c7f04b1171a4f83818a67155bd055de2114deaa82d41d2e3590bffdcae",
+			"keccak256": "0x3bb13976c685b9ab8008f824048d0d49139a95c46bb5d0a2c63653a67981e5f7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://30b3b56e46bd61173e2150e583f317c60263786a554872b25f55e2cd40585ce7",
-				"dweb:/ipfs/Qmb2PAzcpZcLmhmG6UaybArmM1w6H3DVyiNC4MexPcx26y"
+				"bzz-raw://25e2f62e18069e7d711eed783be140bc2eddd7eeafedd3d6ea614670a1514059",
+				"dweb:/ipfs/QmfDvte1yH4bPKpR4nCBvBZeYg4BqqDnetXquoQHUbW2Ja"
 			]
 		},
 		"contracts/ProductNFT.sol": {
