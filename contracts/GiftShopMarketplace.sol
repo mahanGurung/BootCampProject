@@ -46,7 +46,7 @@ contract GiftShopMarketplace is Ownable {
 
     Product[] public products;
     TransactionStruct[] transactions;
-    mapping(address => TransactionStruct) private nftsOwned;
+    mapping(address => TransactionStruct[]) private nftsOwned;
 
     
 
@@ -166,6 +166,8 @@ contract GiftShopMarketplace is Ownable {
 
         require(erc20Token.balanceOf(msg.sender) != 0, "You do not own the required fractional tokens");
 
+        
+
         transactions.push(
             TransactionStruct(
                 totalTx,
@@ -178,20 +180,21 @@ contract GiftShopMarketplace is Ownable {
                 products[_productId - 1].nftUrl,
                 block.timestamp
             ));
+
+        TransactionStruct memory newTransaction = TransactionStruct({
+        id: totalTx,
+        owner: msg.sender,
+        salePrice: totalPrice,
+        title: products[_productId - 1].product_Title,
+        category: products[_productId-1].category,
+        description: products[_productId - 1].desc,
+        amount: productAmount,
+        nftUrl: products[_productId - 1].nftUrl,
+        timestamp: block.timestamp
+    });
         
 
-        nftsOwned[msg.sender] =
-            TransactionStruct({
-                id: totalTx,
-                owner: msg.sender,
-                salePrice: totalPrice,
-                title: products[_productId - 1].product_Title,
-                category: products[_productId-1].category,
-                description: products[_productId - 1].desc,
-                amount: productAmount,
-                nftUrl: products[_productId - 1].nftUrl,
-                timestamp: block.timestamp
-            });
+        nftsOwned[msg.sender].push(newTransaction);
 
         uint256 oldAmount = product.amount;
         product.amount = oldAmount - productAmount;
@@ -227,9 +230,14 @@ contract GiftShopMarketplace is Ownable {
         return transactions;
     }
 
-    function getNftOfUsers(address _user) public view returns (TransactionStruct memory){
-        return nftsOwned[_user];
-    }
+    function getNftOfUsers(address _user) public view returns (TransactionStruct[] memory) {
+    return nftsOwned[_user];
+}
+
+
+    // function getNftOfUsers(address _user) public view returns (TransactionStruct[] memory){
+    //     return nftsOwned[_user];
+    // }
 
 }
 

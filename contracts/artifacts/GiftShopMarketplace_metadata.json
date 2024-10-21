@@ -495,9 +495,9 @@
 								"type": "uint256"
 							}
 						],
-						"internalType": "struct GiftShopMarketplace.TransactionStruct",
+						"internalType": "struct GiftShopMarketplace.TransactionStruct[]",
 						"name": "",
-						"type": "tuple"
+						"type": "tuple[]"
 					}
 				],
 				"stateMutability": "view",
@@ -1111,11 +1111,11 @@
 			]
 		},
 		"contracts/GiftShopMarketplace.sol": {
-			"keccak256": "0x3bb13976c685b9ab8008f824048d0d49139a95c46bb5d0a2c63653a67981e5f7",
+			"keccak256": "0x9788cdd9c48fd3ceaa834b3341a2e873b322659b4619e8c29b2c6acc99a12561",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://25e2f62e18069e7d711eed783be140bc2eddd7eeafedd3d6ea614670a1514059",
-				"dweb:/ipfs/QmfDvte1yH4bPKpR4nCBvBZeYg4BqqDnetXquoQHUbW2Ja"
+				"bzz-raw://717a694c1308fb61222a47ef5bf7818299b10c38ecc780da9ade3b1c8a06218e",
+				"dweb:/ipfs/QmagaYW29Dqgj3mGfoQihsfhhZx6Rn8w6vDU3ArUhJcAXh"
 			]
 		},
 		"contracts/ProductNFT.sol": {
